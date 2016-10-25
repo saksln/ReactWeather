@@ -14,12 +14,12 @@ module.exports = {
     return axios.get(requestUrl).then(function(res){
       if(res.data.cod && res.data.message){
         throw new Error(res.data.message);
-      }else {
-        //console.log(res);
+      } else {
         return res.data.main.temp;
       }
     }, function(err){
-      throw new Error(res.data.message);
+      throw new Error(err.response.data.message);
+
     });
   }
 }
