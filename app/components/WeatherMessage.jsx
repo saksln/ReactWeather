@@ -5,7 +5,7 @@ var WeatherMessage = React.createClass({
       var {temp, location} = this.props;
       return (
         <div>
-          <h3>It's it {(temp-32) / 1.8000} in {location}</h3>
+          <h3>It's it {((temp-32) / 1.8000).toFixed(2)} in {location}</h3>
         </div>
       );
     }

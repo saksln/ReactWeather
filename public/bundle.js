@@ -25632,7 +25632,7 @@
 	        'h3',
 	        null,
 	        'It\'s it ',
-	        (temp - 32) / 1.8000,
+	        ((temp - 32) / 1.8000).toFixed(2),
 	        ' in ',
 	        location
 	      )
