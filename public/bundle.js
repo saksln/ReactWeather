@@ -25487,23 +25487,22 @@
 	var React = __webpack_require__(8);
 	var Nav = __webpack_require__(230);
 
-	var Main = React.createClass({
-	  displayName: 'Main',
-
-	  render: function render() {
-	    return React.createElement(
+	var Main = function Main(props) {
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(Nav, null),
+	    React.createElement(
 	      'div',
-	      null,
-	      React.createElement(Nav, null),
+	      { className: 'row' },
 	      React.createElement(
-	        'h2',
-	        null,
-	        'Main Component'
-	      ),
-	      this.props.children
-	    );
-	  }
-	});
+	        'div',
+	        { className: 'columns medium-6 large-4 small-centered' },
+	        props.children
+	      )
+	    )
+	  );
+	};
 
 	module.exports = Main;
 
@@ -27293,14 +27292,50 @@
 
 	var React = __webpack_require__(8);
 
+	var _require = __webpack_require__(166);
+
+	var Link = _require.Link;
+
+
 	var Examples = React.createClass({
 	  displayName: 'Examples',
 
 	  render: function render() {
 	    return React.createElement(
-	      'h3',
+	      'div',
 	      null,
-	      'Examples Component'
+	      React.createElement(
+	        'h1',
+	        { className: 'text-center' },
+	        'Examples'
+	      ),
+	      React.createElement(
+	        'p',
+	        null,
+	        'Here are a few example locations to try out:'
+	      ),
+	      React.createElement(
+	        'ol',
+	        null,
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: '/?location=Buriram' },
+	            'Buiram,'
+	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: '/?loaction=Liverpool' },
+	            'Liverpoll, England'
+	          )
+	        )
+	      )
 	    );
 	  }
 	});
