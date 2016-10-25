@@ -27260,7 +27260,7 @@
 /* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -27276,9 +27276,42 @@
 
 	var About = function About(props) {
 	  return React.createElement(
-	    'h3',
+	    "div",
 	    null,
-	    'About Component'
+	    React.createElement(
+	      "h3",
+	      { className: "text-center" },
+	      "About"
+	    ),
+	    React.createElement(
+	      "p",
+	      null,
+	      "Here are som of the tools I used:"
+	    ),
+	    React.createElement(
+	      "ul",
+	      null,
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "https://facebook.github.io/react" },
+	          "React"
+	        ),
+	        " - This was the Javascript framework used."
+	      ),
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "http://openweathermap.org" },
+	          "Open Weaher Map"
+	        ),
+	        " - I used Open Weather Map to search for weather data by city name."
+	      )
+	    )
 	  );
 	};
 
@@ -27323,7 +27356,7 @@
 	          React.createElement(
 	            Link,
 	            { to: '/?location=Buriram' },
-	            'Buiram,'
+	            'Buiram, Thailand'
 	          )
 	        ),
 	        React.createElement(
@@ -27332,7 +27365,7 @@
 	          React.createElement(
 	            Link,
 	            { to: '/?loaction=Liverpool' },
-	            'Liverpoll, England'
+	            'Liverpool, England'
 	          )
 	        )
 	      )
