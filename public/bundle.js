@@ -25622,7 +25622,7 @@
 	  handleSearch: function handleSearch(location) {
 	    var that = this;
 
-	    debugger;
+	    //debugger;
 	    this.setState({ isLoading: true });
 
 	    openWeatherMap.getTemp(location).then(function (temp) {
@@ -25647,7 +25647,7 @@
 	      if (isLoading) {
 	        return React.createElement(
 	          'h3',
-	          null,
+	          { className: 'text-center' },
 	          'Fetching weather...'
 	        );
 	      } else if (temp && location) {
@@ -25659,9 +25659,9 @@
 	      'div',
 	      null,
 	      React.createElement(
-	        'h3',
-	        null,
-	        'Weather Component'
+	        'h1',
+	        { className: 'text-center' },
+	        'Get Weather'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	      renderMessage()
@@ -25702,7 +25702,7 @@
 	        React.createElement('input', { type: 'text', ref: 'location' }),
 	        React.createElement(
 	          'button',
-	          null,
+	          { className: 'button expanded' },
 	          'Get Weather'
 	        )
 	      )
@@ -25716,12 +25716,12 @@
 /* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var WeatherMessage = React.createClass({
-	  displayName: 'WeatherMessage',
+	  displayName: "WeatherMessage",
 
 	  render: function render() {
 	    var _props = this.props;
@@ -25729,14 +25729,14 @@
 	    var location = _props.location;
 
 	    return React.createElement(
-	      'div',
+	      "div",
 	      null,
 	      React.createElement(
-	        'h3',
-	        null,
-	        'It\'s it ',
+	        "h3",
+	        { className: "text-center" },
+	        "It's it ",
 	        ((temp - 32) / 1.8000).toFixed(2),
-	        ' in ',
+	        " in ",
 	        location
 	      )
 	    );
